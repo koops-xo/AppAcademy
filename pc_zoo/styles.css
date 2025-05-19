@@ -1,0 +1,246 @@
+:root {}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(160,193,92,1);
+    font-family: 'Chewy', sans-serif;
+    padding: 1rem;
+}
+
+.mobile-header,
+.mobile-footer{
+    display:none;
+}
+
+.banner{
+    display:flex;
+    justify-content: center;
+    background-color: burlywood;
+    width:100vw;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;           /* full viewport width */
+  background-color: beige; /* same as header-container */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem 0;         /* vertical padding, no horizontal */
+  box-sizing: border-box;  /* include padding in width */
+}
+
+.header-container,
+.footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;              /* remove padding here */
+}
+
+.header-content,
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;               /* shrink gap to fit smaller screens */
+  flex-wrap: nowrap;       /* force no wrapping */
+  width: 90vw;             /* keep content inside the viewport width */
+  max-width: 800px;       /* max width for big screens */
+}
+
+.header-links-left,
+.header-links-right {
+    display: flex;
+}
+
+.header-links-left a,
+.header-links-right a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu{
+    background-image: url(public/Untitled.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.menu-container {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: white;
+}
+
+.menu-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-header {
+    text-align: center;
+}
+
+.menu-card {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border: solid;
+    border-radius: 1.2rem;
+    border-color: aliceblue;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-card img {
+    aspect-ratio: 1/1;
+    height: 90px;
+    width: 90px;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+/*linger click effect*/
+/* animal card pages */
+.info-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border: solid;
+    border-radius: 15px;
+    border-color: rgba(32, 3, 3, 0.714);
+    background-color: rgba(250, 235, 215, 0.217);
+}
+
+.info-page-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1yrem;
+    align-items: center;
+}
+
+.info-page-content h3 {
+    font-size: 30px;
+    padding-top: 1rem;
+}
+
+.info-page-content p {
+    font-size: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-left: 2rem;
+    font-size: medium;
+    background-color:white;
+
+}
+
+.info img {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+}
+
+footer{
+    display: flex;
+     background-color: beige; /* same as header-container */
+     padding:rem;
+     gap:2rem;
+}
+
+.zoo-map svg {
+  width: 100%;
+  height:120%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/*  Responsive Design Starts Here */
+
+@media (max-width: 767px) {
+  .mobile-header,
+  .mobile-footer {
+    display: flex;  /* show mobile nav/footer */
+  }
+  .ipad-header,
+  .ipad-footer {
+    display: none;  /* hide iPad nav/footer */
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+    .header-content {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .menu-card {
+        flex-direction: column;
+    }
+
+    .info img {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-card img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .info {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  .header-links-left,
+  .header-links-right,
+  .footer-links-left,
+  .footer-links-right {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left:3rem;
+    padding-right: 3rem;
+  }
+
+}
