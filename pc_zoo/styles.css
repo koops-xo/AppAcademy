@@ -196,14 +196,6 @@ footer{
 
 @media screen and (max-width: 768px) {
 
-    .header-content {
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .menu-card {
-        flex-direction: column;
-    }
 
     .info img {
         width: 100%;
